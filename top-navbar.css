@@ -1,0 +1,981 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Onest:wght@100..900&family=Outfit:wght@100..900&family=Playwrite+AU+SA:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    width: 100%;
+    /* height: 100%; */
+}
+
+li {
+    list-style: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.top-navbar a {
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+}
+
+.top-navbar-a-text {
+    border-right: 1px solid white;
+    padding-right: 10px;
+}
+
+.top-navbar-left {
+    width: 100%;
+    padding: 6px 130px;
+    background-color: #0066cc;
+    display: flex;
+}
+
+.top-navbar-right {
+    padding: 6px 130px;
+    background-color: black;
+    display: flex;
+    gap: 10px;    
+}
+
+.main-navbar {
+    margin: 0 8%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    padding-bottom: 10px;
+}
+
+.main-navbar-topleft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.main-navbar-topleft img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-navbar-topleft-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-navbar-topleft-text-clg-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.main-navbar-topleft-text-clg-name-2 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.main-navbar-topleft-text-councelling-codes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.main-navbar-topright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;   
+}
+
+.main-navbar-topright:hover {
+    cursor: pointer;
+}
+
+.main-navbar-topright-p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main-navbar-topright i {
+    color: #3c98db;
+    transform: scale(1.3);
+}
+
+.main-navbar hr {
+    border:none;
+    height: 1px;
+    background-color: #DFC9C8;
+}
+
+.main-navbar-bottom {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    position: relative;
+}
+
+.main-navbar-bottom a {
+    text-decoration: none;
+    color: black;
+}
+
+.main-navbar-bottom > li > div {
+    /* border: 1px solid black; */
+    padding: 10px;
+}
+
+.main-navbar-bottom > li > div:hover{
+    cursor: pointer;
+}
+
+.first-level-dropdown-admissions,
+.first-level-dropdown-academics,
+.first-level-dropdown-students,
+.first-level-dropdown-research,
+.first-level-dropdown-placements,
+.first-level-dropdown-institute {
+    position: absolute;
+    font-size: 14px;
+    width: 240px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden; 
+    transform: translateY(-20px);
+    transition: all 0.6s ease;
+}
+
+.first-level-dropdown-research {
+    right: 0;
+}
+
+.first-level-dropdown-admissions:hover,
+.first-level-dropdown-academics:hover,
+.first-level-dropdown-students:hover,
+.first-level-dropdown-research:hover,
+.first-level-dropdown-placements:hover,
+.first-level-dropdown-institute:hover {
+    cursor: pointer;
+}
+
+.main-navbar-bottom > li:hover > .first-level-dropdown-admissions,
+.main-navbar-bottom > li:hover > .first-level-dropdown-academics,
+.main-navbar-bottom > li:hover > .first-level-dropdown-students,
+.main-navbar-bottom > li:hover > .first-level-dropdown-research,
+.main-navbar-bottom > li:hover > .first-level-dropdown-placements,
+.main-navbar-bottom > li:hover > .first-level-dropdown-institute {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.main-navbar-bottom > li > ul > hr {
+    margin: 10px 0; 
+    border: none; 
+    border-top: 1px solid #ccc; 
+    height: 0; 
+    background: none;
+}
+
+.first-level-dropdown-admissions > li,
+.first-level-dropdown-academics > li,
+.first-level-dropdown-students > li,
+.first-level-dropdown-research > li,
+.first-level-dropdown-placements > li,
+.first-level-dropdown-institute > li {
+    position: relative;
+}
+
+
+.second-level-dropdown-admissions,
+.second-level-dropdown-academics-department,
+.second-level-dropdown-academics-facilities,
+.second-level-dropdown-students,
+.second-level-dropdown-research,
+.second-level-dropdown-placements,
+.second-level-dropdown-institute-about,
+.second-level-dropdown-institute-administration,
+.second-level-dropdown-institute-management {
+    position: absolute;
+    font-size: 14px;
+    width: 240px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 10px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden; 
+    transform: translateY(-10%);
+    transition: all 0.6s ease;
+    left: 100%;
+}
+
+.second-level-dropdown-admissions:hover,
+.second-level-dropdown-academics-department:hover,
+.second-level-dropdown-academics-facilities:hover,
+.second-level-dropdown-students:hover,
+.second-level-dropdown-research:hover,
+.second-level-dropdown-placements:hover,
+.second-level-dropdown-institute-about:hover,
+.second-level-dropdown-institute-administration:hover,
+.second-level-dropdown-institute-management:hover {
+    cursor: pointer;
+}
+
+.first-level-dropdown-admissions > li:hover > .second-level-dropdown-admissions,
+.first-level-dropdown-academics > li:hover > .second-level-dropdown-academics-department,
+.first-level-dropdown-academics > li:hover > .second-level-dropdown-academics-facilities,
+.first-level-dropdown-students > li:hover > .second-level-dropdown-students,
+.first-level-dropdown-institute > li:hover > .second-level-dropdown-institute-about,
+.first-level-dropdown-institute > li:hover > .second-level-dropdown-institute-administration,
+.first-level-dropdown-institute > li:hover > .second-level-dropdown-institute-management,
+.first-level-dropdown-placements > li:hover > .second-level-dropdown-placements,
+.first-level-dropdown-research > li:hover > .second-level-dropdown-research {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.second-level-dropdown-admissions hr,
+.second-level-dropdown-academics-department hr,
+.second-level-dropdown-academics-facilities hr,
+.second-level-dropdown-institute-about hr,
+.second-level-dropdown-institute-administration hr,
+.second-level-dropdown-institute-management hr,
+.second-level-dropdown-students hr,
+.second-level-dropdown-placements hr,
+.second-level-dropdown-research hr {
+    margin: 10px 0; 
+    border: none; 
+    border-top: 1px solid #ccc; 
+    height: 0; 
+    background: none;
+}
+
+.second-level-dropdown-placements {
+    right : 100%;
+}
+
+
+/* Container for scrolling text */
+/* Announcements container */
+.announcements-tab {
+    width: 100%;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center the text vertically */
+    justify-content: space-between;
+    background-color: #F4F0EB; /* Optional background color */
+    border: 1px solid #ddd; /* Optional border */
+    overflow: hidden; /* Hide overflowing text */
+    position: relative; /* Required for child positioning */
+    height: 50px; /* Set a consistent height */
+    border: none;
+}
+
+/* Announcements heading on the left */
+.announcements-tab-heading {
+    /* flex: 0 0 300px; Fixed width for the heading */
+    padding: 0 5%;
+    background-color: #0066cc; /* Background color for the heading */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold font */
+    text-align: center; /* Center text horizontally */
+    line-height: 50px; /* Vertically center text */
+    z-index: 100; /* Keep heading on top */
+}
+
+/* Scrolling text wrapper */
+.announcements-tab-text {
+    display: inline-block; /* Inline block for scrolling */
+    /* flex: 1; Take remaining space */
+    animation: scroll-left 60s linear infinite; /* Smooth scrolling animation */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+/* Hover effect: Pause animation */
+.announcements-tab:hover .announcements-tab-text {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+/* Individual announcements and separators */
+.announcements-tab-text span {
+    display: inline-block; /* Inline block for each announcement */
+    margin: 0 15px; /* Space between items */
+    font-size: 16px; /* Font size */
+    color: #3c98db; /* Text color */
+}
+
+.announcements-tab-text span a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Separator styling */
+.announcements-tab-text span:nth-child(odd) {
+    font-weight: 400; /* Bold separator */
+    color: #333 /* Separator color */
+}
+
+/* Scrolling animation */
+@keyframes scroll-left {
+    from {
+        transform: translateX(30%); /* Start slightly ahead from the right edge */
+    }
+    to {
+        transform: translateX(-100%); /* End before the extreme left */
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    /* height: 500px;  Adjust height of     the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.frame {
+    position: relative;
+    width: 800px;
+    height: 480px;
+    overflow: hidden;
+}
+
+/* Container for the images and text */
+.slider {
+    display: flex;
+    transition: transform 1s ease;  /* Smooth transition for image sliding */
+    width: 500%;  /* Each image occupies 100%, so 5 images need 500% width */
+}
+
+.slide {
+    position: relative;  /* Position relative to allow overlaying text */
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fill the container */
+}
+
+/* Style for the text overlay */
+.image-text {
+    position: absolute;
+    bottom: 20%;  /* Position text at the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);  /* Center the text */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  /* Adds shadow to make text more readable */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    border-radius: 5px;
+}
+
+/* Arrows */
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.arrow-left, .arrow-right {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Background color for arrows */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+/* Optional Styling for Arrows */
+.arrow-left polyline, .arrow-right polyline {
+    stroke-width: 3;
+}
+
+
+/* Image Transition */
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Notice Board Styles */
+#notice-board {
+    background-color: #f4f0eb; /* Light background */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.notices {
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.notice {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notice a {
+    text-decoration: none;
+    color: #0066cc;
+}
+
+.notice a:hover {
+    color: #0066cc;
+}
+
+.notice h4 {
+    font-size: 1rem;
+    color: #000; /* Blue for notice title */
+}
+
+.notice .date {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin-top: 10px;
+}
+
+.view-all-button {
+    display: block;
+    /* width: 100%; */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0066cc; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.view-all-button:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+.view-all-button:active {
+    background-color: #004a8a; /* Even darker shade for active state */
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle pressed shadow */
+}
+
+section {
+    padding: 60px 20px;
+    /* margin-bottom: 40px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Card Styles */
+.section-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #0066cc;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .section-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* View All Button Styles */
+.view-all-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0066cc; /* Primary button color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.view-all-button:hover {
+    background-color: #3c98db; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+}
+
+.view-all-button:active {
+    background-color: #0066cc; /* Even darker shade for active state */
+    transform: translateY(0); /* Reset lift */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle pressed shadow */
+}
+
+#awards, #ar-events {
+    background-color: #F4F0EB;
+}
+
+
+footer {
+    background-color: #1f3a63;
+    color: white;
+    padding: 40px 20px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer hr {
+    color:white;
+    opacity: 0.4;
+}
+
+.footer-container .level2 {
+    width: 100%;
+}
+
+.footer-container .level2 .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container .level2 p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-container .level2 .heading .clg-name {
+    font-size: 18px;
+    color: white;
+
+}
+
+.footer-container .level2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-container .level2 hr {
+    height: 80%;
+}
+ 
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white; /* Red for headings */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: white;   
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    color: #ccc;
+}
+
+
+
+/* Add these media queries at the end of your existing CSS */
+
+/* Large Devices (less than 1200px) */
+@media screen and (max-width: 1200px) {
+    .main-navbar {
+        margin: 0 2%;
+    }
+
+    .top-navbar-left, .top-navbar-right {
+        padding: 6px 40px;
+    }
+
+    .frame {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* Medium Devices (less than 992px) */
+@media screen and (max-width: 992px) {
+    .main-navbar-topleft-text-clg-name {
+        font-size: 16px;
+    }
+
+    .main-navbar-topleft-text-clg-name-2 {
+        font-size: 12px;
+    }
+
+    .main-navbar-bottom {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .footer-container .level2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container .level2 hr {
+        width: 80%;
+        height: 1px;
+    }
+}
+
+/* Small Devices (less than 768px) */
+@media screen and (max-width: 768px) {
+    .top-navbar {
+        flex-direction: column;
+    }
+
+    .top-navbar-left, .top-navbar-right {
+        width: 100%;
+        padding: 6px 20px;
+        justify-content: center;
+    }
+
+    .main-navbar-top {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-navbar-topleft {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-navbar-topleft-text-councelling-codes {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-navbar-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-level-dropdown-admissions,
+    .first-level-dropdown-academics,
+    .first-level-dropdown-students,
+    .first-level-dropdown-research,
+    .first-level-dropdown-placements,
+    .first-level-dropdown-institute {
+        position: static;
+        width: 100%;
+        transform: none;
+    }
+
+    .second-level-dropdown-admissions,
+    .second-level-dropdown-academics-department,
+    .second-level-dropdown-academics-facilities,
+    .second-level-dropdown-students,
+    .second-level-dropdown-research,
+    .second-level-dropdown-placements,
+    .second-level-dropdown-institute-about,
+    .second-level-dropdown-institute-administration,
+    .second-level-dropdown-institute-management {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+
+    .announcements-tab {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .announcements-tab-heading {
+        width: 100%;
+    }
+
+    .frame {
+        height: 300px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Extra Small Devices (less than 576px) */
+@media screen and (max-width: 576px) {
+
+    .top-navbar {
+        display: none;
+    }
+
+    .main-navbar-topleft img {
+        width: 60px;
+        height: auto;
+    }
+
+    .main-navbar-topleft-text-clg-name {
+        font-size: 14px;
+    }
+
+    .main-navbar-topleft-text-clg-name-2 {
+        font-size: 11px;
+    }
+
+    .main-navbar-topleft-text-councelling-codes p {
+        font-size: 14px;
+    }
+
+    .main-navbar-bottom {
+        display: none;
+    }
+
+    .frame {
+        height: 250px;
+    }
+
+    .image-text {
+        font-size: 18px;
+        bottom: 10%;
+    }
+
+    .arrow-left, .arrow-right {
+        width: 35px;
+        height: 35px;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer-container .level2 .heading .clg-name {
+        font-size: 16px;
+    }
+}
+
+/* Additional Fixes for Navigation */
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    /* Mobile Navigation Menu Button */
+    .mobile-menu-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1000;
+    }
+
+    /* Adjustments for dropdown menus */
+    .main-navbar-bottom > li > div {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    /* Fix for nested dropdowns */
+    .first-level-dropdown-admissions li,
+    .first-level-dropdown-academics li,
+    .first-level-dropdown-students li,
+    .first-level-dropdown-research li,
+    .first-level-dropdown-placements li,
+    .first-level-dropdown-institute li {
+        padding: 10px 0;
+    }
+}
